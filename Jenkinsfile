@@ -23,12 +23,12 @@ pipeline {
                     --cov-report xml --cov adder adder.py
                 '''
             }
-        }
-		post {
-			always {
-				junit 'junit.xml'
-				cobertura coberturaReportFile: 'coverage.xml'
-			}
-		}
+        }		
     }
+	post {
+		always {
+			junit 'junit.xml'
+			cobertura coberturaReportFile: 'coverage.xml'
+		}
+	}
 }
