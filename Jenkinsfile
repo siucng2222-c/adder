@@ -5,7 +5,7 @@ pipeline {
             filename 'jenkinsagent.dockerfile'
         }
     }	
-	parameters {
+    parameters {
         string(name: 'REF', defaultValue: '\${ghprbActualCommit}', description: 'Commit to build')
     }
     stages {
