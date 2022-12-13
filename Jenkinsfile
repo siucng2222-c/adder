@@ -6,7 +6,7 @@ pipeline {
         }
     }	
     parameters {
-        string(name: 'BRANCH', defaultValue: '\${ghprbActualCommit}', description: 'Commit to build')
+        string(name: 'REF', defaultValue: '\${ghprbActualCommit}', description: 'Commit to build')
     }
     stages {
 		stage('Hello GitHub') {
